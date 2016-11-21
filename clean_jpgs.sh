@@ -84,7 +84,7 @@ fi
 for jpg_photo in $(find "$DIR" -type f -name "*.${JPG_EXT}"); do
   raw_filename="${jpg_photo/%${JPG_EXT}/${RAW_EXT}}"
   if [ -f "$raw_filename" ]; then
-    echo -n "JPG file '${jpg_photo}' has matching RAW file '${raw_filename}: "
+    echo -n "JPG file '${jpg_photo}' has matching RAW file '${raw_filename}': "
     if [ $DRY_RUN -eq 0 ]; then
       rm "$jpg_photo"
       echo "removed JPG"
